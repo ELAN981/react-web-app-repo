@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Engineer",
     description:
-      "As an Engineer, I have worked in the mines and with my learnings so far, I have identified gaps where high-end technologies through appliying ML and AI could be deployed as solutions to reduce the hazardous nature of the industry and workplace induced illnesses",
+      "As an Engineer, and Project Manager I have worked in the mines and with my learnings so far, I have identified gaps where high-end technologies through appliying ML and AI could be deployed as solutions to reduce the hazardous nature of the industry and workplace induced illnesses",
     getImageSrc: () => require("../images/photo8.jpg"),
   },
   {

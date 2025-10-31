@@ -108,7 +108,7 @@ const ContactMeSection = () => {
                 > 
                   <option value="hireMe">Let's collaborate on a project</option> 
                   <option value="openSource">Work on Python ML/AI Project</option> 
-                  <option value="studyTogether">Let us study together</option> 
+                  <option value="studyTogether">Request for Resume</option> 
                   <option value="other">Other</option> 
                 </Select> 
               </FormControl> 

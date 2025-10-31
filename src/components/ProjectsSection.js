@@ -43,20 +43,26 @@ const ProjectsSection = () => {
       <Heading as="h1" id="projects-section" color={"black"}>
         Featured Projects
       </Heading>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
-        gridGap={10}
-      >
-        {projects.map((project) => (
-          <Card
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            imageSrc={project.getImageSrc()}
-          />
-        ))}
-      </Box>
+        <Box
+          display="grid"
+          gridTemplateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(1, 1fr)",     
+            md: "repeat(2, 1fr)",    
+            lg: "repeat(3, 1fr)",
+            w: "full",    
+          }}
+          gridGap={10}
+        >
+          {projects.map((project) => (
+            <Card
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              imageSrc={project.getImageSrc()}
+            />
+          ))}
+        </Box>
     </FullScreenSection>
   );
 };

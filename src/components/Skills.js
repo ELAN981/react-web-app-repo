@@ -1,6 +1,6 @@
 import FullScreenSection from "./FullScreenSection";
 import React from "react";
-import {Box, Heading, Img} from "@chakra-ui/react"
+import {Box, Heading, SimpleGrid, Image} from "\@chakra-ui/react"
 import Card from "./Card";
 
 const skills = [
@@ -32,7 +32,7 @@ const skills = [
     {
         title: "Version Control",
         description: "using Git and GitHub for fast, secure code collaboration and versioning",
-        getImageSrc: () => require("../skillsImgs/pythonista.png")
+        getImageSrc: () => require("../skillsImgs/gitbest.png")
 
     },
 ];
@@ -49,20 +49,21 @@ const Skills = () => {
         <Heading as="h1" id="skills-section" color={"gray"} >
             Skills and Learnings
         </Heading>
-        <Box
-        display="grid" 
-        gridTemplateColumns="repeat(3,minmax(0,8fr))"
-        gridGap={10}
-        >
+
+            <SimpleGrid
+            columns={{ base: 1, md: 2, lg: 3 }}
+            spacing={10}
+            w="full"
+            >
             {skills.map((skill) => (
-                <Card 
-                key={skill.title} 
+                <Card
+                key={skill.title}
                 title={skill.title}
-                description ={skill.description}
+                description={skill.description}
                 imageSrc={skill.getImageSrc()}
                 />
             ))}
-        </Box>
+            </SimpleGrid>
         </FullScreenSection>
     );
 }   

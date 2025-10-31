@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Image, Text, VStack, SimpleGrid } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
@@ -6,6 +6,7 @@ import React from "react";
 const Card = ({ title, description, imageSrc }) => {
   
   return (
+
     <VStack 
     transition={"transform 2s ease-in-out"}
     _hover={{
@@ -18,7 +19,12 @@ const Card = ({ title, description, imageSrc }) => {
     backgroundColor='white'
     cursor='pointer'
     borderRadius='xl'
+    
     >
+    <SimpleGrid
+      columns={{base:1, sm: 1, md: 2, lg: 3}}
+      w={"full"}
+      >
       <Image src= {imageSrc} borderRadius='xl' />
 
       <VStack alignItems='flex-start' spacing={4} p={4} >
@@ -36,7 +42,9 @@ const Card = ({ title, description, imageSrc }) => {
           <FontAwesomeIcon icon={faArrowRight} size='1x'/>
         </HStack>
       </VStack>
+      </SimpleGrid>
     </VStack>
+
   );
 };
 
